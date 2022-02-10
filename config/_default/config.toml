@@ -1,0 +1,15 @@
+_merge = "deep"
+
+languageCode = 'fr-fr'
+title = 'Service général de médecine conseil et contrôle'
+
+[module]
+[[module.imports]]
+path = 'github.com/disic/frago'
+
+[outputs]
+ home    = ["HTML","JSON"]
+
+[params]
+  organisation = "Service général de médecine conseil et contrôle"
+  robots = "noindex, nofollow"
