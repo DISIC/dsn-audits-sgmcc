@@ -1,9 +1,11 @@
-website: "https://preinsc.archi.fr/taiga/cnd/index.php"
-contacts:
-  email: __CONTACT_EMAIL__
-  address: __CONTACT_ADDRESS__
-audits:
-  "2022-02-11":
+---
+description: Étude de la conformité RGAA des pages du site.
+date: 2022-02-11
+type: accessibility
+kind: page
+accessibility:
+  website: "__WEBSITE_URL__"
+  audit:
     guidelines: "RGAA 4.1"
     condition: "Auto-évaluation"
     technologies: ["HTML", "CSS", "JavaScript"]
@@ -21,5 +23,6 @@ audits:
         "Safari Version 15.4",
       ]
   contact:
-    email: __CONTACT_AUDIT_01_EMAIL__
-    address: __CONTACT_AUDIT_01_ADDRESS__
+    email: __CONTACT_EMAIL__
+    address: __CONTACT_ADDRESS__
+---
