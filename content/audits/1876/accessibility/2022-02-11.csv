@@ -29,9 +29,10 @@ Thématiques,Critères,Accueil | https://admission.archi.fr/taiga/cnd/index.php
 5,1,na,na,na,na,na,na,na,na
 5,2,na,na,na,na,na,na,na,na
 5,3,c,na,na,c,c,c,c,c
-5,4,nc,na,na,na,na,na,na,na
+5,4,nc|Absence de titre sur le tableau. Ajouter un `<caption>`,na,na,na,na,na,na,na
 5,5,na,na,na,na,na,na,na,na
-5,6,nc,na,na,na,na,na,na,na
+5,6,"nc|Déclarer les cellules ""Sessions nationales"" et ""Sessions locales sélectionde l'établissement dans des éléments `<th>`. 
+[Plus d'informations sur le critère 5.6 - voir dans les cas particuliers](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-6)",na,na,na,na,na,na,na
 5,7,na,na,na,c,na,na,c,na
 5,8,na,na,na,nc,nc,nc,nc,nc
 6,1,c,nc,nc,nc,nc,nc,nc,nc
@@ -43,7 +44,7 @@ Thématiques,Critères,Accueil | https://admission.archi.fr/taiga/cnd/index.php
 7,5,na,na,na,na,na,na,na,na
 8,1,c,c,c,c,c,c,c,c
 8,2,c,c,c,c,c,nc,nc,nc
-8,3,c,c,c,c,c,c,c,c
+8,3,c|Note : [Voir pour plus d'informations la langue par défaut sur RGAA](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/glossaire/#langue-par-defaut),c,c,c,c,c,c,c
 8,4,c,c,c,c,c,c,c,c
 8,5,c,c,c,c,c,c,c,c
 8,6,c,na,nc,nc,nc,nc,nc,nc
@@ -53,19 +54,19 @@ Thématiques,Critères,Accueil | https://admission.archi.fr/taiga/cnd/index.php
 8,10,na,na,na,na,na,na,na,na
 9,1,na,nc,nc,nc,nc,nc,nc,nc
 9,2,na,na,nt,nt,nt,nt,nt,nt
-9,3,nc,na,na,c,c,c,c,c
+9,3,nc|Ajouter une liste non ordonnée sur la liste des établissements `<ul><li>`,na,na,c,c,c,c,c
 9,4,na,na,na,na,na,na,na,na
 10,1,c,c,c,c,c,c,c,c
 10,2,c,c,c,nc,nc,nc,nc,nc
 10,3,c,c,nc,c,c,nc,nc,nc
-10,4,nc,nc,nc,nc,nc,nc,nc,nc
+10,4,"nc|Utiliser des valeurs relatives (rem, em) au lieu des absolues (px). [Plus d'information sur l'agrandissement des caractères](https://disic.github.io/guide-integrateur/11-agrandissement-des-caracteres.html",nc,nc,nc,nc,nc,nc,nc
 10,5,c,c,c,c,c,c,c,c
 10,6,na,na,na,nc,na,c,na,na
 10,7,c,c,c,c,c,c,c,c
 10,8,na,na,na,na,na,c,c,c
 10,9,c,c,c,na,c,c,c,c
 10,10,c,c,c,na,c,c,c,c
-10,11,nc,nc,nc,nc,nc,nc,nc,nc
+10,11,nc|Supprimer cette règle : `div.main { width: 600px; }` pour ne plus avoir le scroll horizontal. [Quelques pistes sur le site du W3C](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html#sufficient),nc,nc,nc,nc,nc,nc,nc
 10,12,c,c,c,c,c,c,c,c
 10,13,na,na,na,na,na,na,na,na
 10,14,na,na,na,na,na,na,na,na
@@ -87,7 +88,7 @@ Thématiques,Critères,Accueil | https://admission.archi.fr/taiga/cnd/index.php
 12,3,na,na,na,na,na,na,na,na
 12,4,na,na,na,na,na,na,na,na
 12,5,na,na,na,na,na,na,na,na
-12,6,nc,nc,nc,nc,nc,nc,nc,nc
+12,6,nc|Absence des zones de regroupement de contenus. [Voir pour plus d'informations sur le critère 12.6](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-12-6,nc,nc,nc,nc,nc,nc,nc
 12,7,na,na,na,na,na,nc,nc,nc
 12,8,c,nc,nc,nc,nc,nc,nc,nc
 12,9,c,c,c,c,c,c,c,c
