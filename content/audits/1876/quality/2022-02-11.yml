@@ -1,0 +1,51 @@
+---
+- pages:
+  - name: Global au site
+    blocks:
+    - name: Page
+      errors:
+        - name: Valeur relatives
+          description: Utiliser des valeurs relatives (rem, em) au lieu des absolues (px). [Plus d'information sur l'agrandissement des caractères](https://disic.github.io/guide-integrateur/11-agrandissement-des-caracteres.html)
+          criterion: '10.4'
+          type: structure
+          status : important
+          delivery: Lot 1
+        - name: Menu d’évitement
+          description: Absence de liens d'évitement
+          criterion: '12.7'
+          type: structure
+          delivery: Lot 1
+        - name: Zones de regroupement
+          description: Absence des zones de regroupement de contenus. [Voir pour plus d'informations sur le critère 12.6](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-12-6)
+          criterion: '12.6'
+          type: code
+          delivery: Lot 1
+        - name: Taille fixe page
+          description: Supprimer cette règle `div.main` pour ne plus avoir le scroll horizontal. [Quelques pistes sur le site du W3C](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html#sufficient)
+          criterion: '10.11'
+          type: CSS
+          delivery: Lot 1
+    - name: Contenu
+      errors:
+        - name: Images informatives
+          description: Remplacer le texte de l'alternative "[Image]" par "Se déconnecter". Remplacer le texte de l'alternative "[image]" par " HEAR - Haute École des Arts du Rhin Mulhouse - Strasbourg"
+          criterion: '1.3'
+          type: visuel
+          delivery: Lot 1 
+        - name: Image de décoration 
+          description: Supprimer l'alternative textuelle de l'image de décoration du bloc "dossier incomplet" pour qu'elle ne soit pas restituée par les TA
+          criterion: '1.2'
+          type: visuel
+          delivery: Lot 1
+        - name: Information par la couleur 
+          description: Information donnée par la couleur pour l'enregistrement effectué
+          criterion: '3.1'
+          type: visuel
+          delivery: Lot 1
+    - name: Formulaires
+      errors:
+        - name: Contraste des champs
+          description: Les champs `<input>` ne sont pas assez contrastés. (ratio de 2 au lieu de 3)
+          criterion: '3.3'
+          type: code
+          delivery: Lot 1
