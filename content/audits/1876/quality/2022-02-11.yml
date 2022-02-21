@@ -8,10 +8,15 @@
           description: L'intitulé de "N°Dossier" dans la navigation n'est pas explicite
           criterion: '6.1'
           type: code
-          delivery: Lot 1
+          delivery: Majeur
         - name: Navigation au clavier
           description: L'ordre de tabulation est à l'envers. Il devrait d'abord aller sur N°Dossier, ensuite le formulaire et enfin le lien de déconnexion.
           criterion: '12.8'
+          type: code
+          delivery: Bloquant
+        - name: Ordre de lecture
+          description: L'ordre des informations n'est pas la même à la lecture
+          criterion: '10.3'
           type: code
           delivery: Bloquant
     - name: Page
@@ -21,53 +26,68 @@
           criterion: '10.4'
           type: structure
           status : important
-          delivery: Lot 1
+          delivery: Majeur
         - name: Menu d’évitement
           description: Absence de liens d'évitement
           criterion: '12.7'
           type: structure
-          delivery: Lot 1
+          delivery: Majeur
         - name: Zones de regroupement
           description: Absence des zones de regroupement de contenus. [Voir pour plus d'informations sur le critère 12.6](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-12-6)
           criterion: '12.6'
           type: code
-          delivery: Lot 1
+          delivery: Majeur
         - name: Taille fixe page
           description: Supprimer cette règle `div.main` pour ne plus avoir le scroll horizontal. [Quelques pistes sur le site du W3C](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html#sufficient)
           criterion: '10.11'
           type: CSS
-          delivery: Lot 1
+          delivery: Majeur
     - name: Contenu
       errors:
         - name: Images informatives
           description: Remplacer le texte de l'alternative "[Image]" par "Se déconnecter". Remplacer le texte de l'alternative "[image]" par " HEAR - Haute École des Arts du Rhin Mulhouse - Strasbourg"
           criterion: '1.3'
           type: visuel
-          delivery: Lot 1 
+          delivery: Majeur 
         - name: Image de décoration 
           description: Supprimer l'alternative textuelle de l'image de décoration du bloc "dossier incomplet" pour qu'elle ne soit pas restituée par les TA
           criterion: '1.2'
           type: visuel
-          delivery: Lot 1
+          delivery: Majeur
         - name: Information par la couleur 
           description: Information donnée par la couleur pour l'enregistrement effectué
           criterion: '3.1'
           type: visuel
-          delivery: Lot 1
+          delivery: Majeur
+        - name: Contrastes
+          description:  Les titres des entêtes du tableau ne sont pas assez contastés. Le message d'enregistrement du formulaire n'est pas assez contrasté (ratio de 1.82). 
+          criterion: '3.2'
+          type: visuel
+          delivery: Bloquant
     - name: Formulaires
       errors:
         - name: Contraste des champs
           description: Les champs `<input>` ne sont pas assez contrastés. (ratio de 2 au lieu de 3)
           criterion: '3.3'
           type: code
-          delivery: Lot 1
+          delivery: Bloquant
+        - name: Etiquettes des champs
+          description: Absence d'étiquette sur les champs `<input>` du formulaire
+          criterion: '11.1'
+          type: code
+          delivery: Bloquant
+        - name: Message d'erreurs 
+          description: Absence de suggestion de données attendues dans les champs
+          criterion: '11.11'
+          type: code
+          delivery: Majeur
     - name : Entête
       errors: 
         - name: Entête de la page
           description: Le texte "°Dossier" n'est pas assez contrasté (ratio de 2.9 au lieu de 4.5). Les textes du formulaire ne sont pas assez contrastés. (ratio de 4.4 au lieu de 4.5). Le message d'erreur n'est pas assez contrasté ratio de 3.36 au lieu de 4.5). Le texte de version n'est pas assez contrasté (ratio de 2.8)
           criterion: '1.3'
           type: visuel
-          delivery: Lot 1
+          delivery: Majeur
   - name : Page d'Accueil
     blocks : 
       - name : Contenu
@@ -76,12 +96,12 @@
           description:  Absence de titre sur le tableau. Ajouter un `<caption>`
           criterion: '5.4'
           type: code 
-          delivery: Lot 1
+          delivery: Bloquant
         - name: Tableau de données
           description: Déclarer les cellules "Sessions nationales" et "Sessions locales" / "sélection de l'établissement" dans des éléments `<th>`.[Plus d'informations sur le critère 5.6 - voir dans les cas particuliers](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-6)
           criterion: '5.6'
           type: code
-          delivery: Lot 1
+          delivery: Majeur
   - name : Page Trouver numéro de dossier
     blocks : 
     - name : Contenu
@@ -90,27 +110,27 @@
           description: Absence du nom de Taïga
           criterion: '8.6'
           type: code
-          delivery: Lot 1
+          delivery: Bloquant
         - name: Structures des titres
           description: Ajouter un <hn> sur le titre "N°Dossier"
           criterion: '9.1'
           type: code
-          delivery: Lot 1
+          delivery: Bloquant
         - name: Formulaire
           description: Absence d'étiquette sur les champ de formulaire (référence et nom). Ajouter un attribut `aria-label` ou un attribut `title` avec l'intitulé du champ sur les `<input>`.
           criterion: '11.1'
           type: code
-          delivery: Lot 1
+          delivery: Bloquant
         - name: Bouton de recherche 
           description: Intitulé du bouton pas pertinent. Par exemple "Rechercher le dossier" 
           criterion: '11.9'
           type: code 
-          delivery: Lot 1
+          delivery: Majeur
         - name: Messages d'erreurs
           description: Absence de suggestion de données attendues dans les champs
           criterion: '11.11'
           type: code
-          delivery: Lot 1
+          delivery: Majeur
   - name : Page Création de dossier
     blocks : 
     - name : Page 
@@ -123,13 +143,8 @@
     - name : Contenu
       errors : 
         - name: Structure des titres
-          description: Ajouter élément <h1> au texte "Créer Dossier" et <h2> sur le titre de l'école HEAR
+          description: Ajouter élément `<h1>` au texte "Créer Dossier" et `<h2>` sur le titre de l'école HEAR
           criterion: '9.1'
-          type: code
-          delivery: Majeur
-        - name: Formulaire
-          description: Absence d'étiquette sur les champs de formulaire
-          criterion: '11.1'
           type: code
           delivery: Bloquant
   - name : Page d'accueil du dossier
@@ -140,35 +155,30 @@
             description: Présence de `<th>` [Voir le critère 5.8 pour plus d'informations](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-8) 
             criterion: '5.8'
             type: code
-            delivery: Lot 1
+            delivery: Majeur
           - name: Validité du code
             description: L'attribut `name` est obsolète, le remplacer par un attribut `id` sur le conteneur le plus proche ( `<a name="cnd">`, `<a name="fch">` et `<a name="vilnss">`). 
             criterion: '8.2'
             type: code
-            delivery: Lot 1
+            delivery: Majeur
           - name: Titre de la page
             description: Absence du nom du site "Taiga Admission" et information complémentaire concernant l'enregistrement du dossier qui n'est pas validé (?)
             criterion: '8.6'
             type: code
-            delivery: Lot 1
+            delivery: Bloquant
           - name: Structure des titres
             description: Ajouter un élément `<h1>` à "N°Dossier", `<h2>` sur le titre "Sesssion d'admission …" 
             criterion: '9.1'
             type: code
-            delivery: Lot 1
+            delivery: Bloquant
           - name: Affichage de l'info 
             description: L'information indiquant que nous sommes sur la partie "état civil et coordonnées" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
             criterion: '10.2' 
             type: code 
-            delivery: Lot 1
+            delivery: Bloquant
           - name: Distinction des liens
             description: Il n'est donné aucune information visuelle sur les liens "écrire" de la ligne "courriels" 
             criterion: '10.6'
-            type: code
-            delivery: Lot 1
-          - name: Formulaire
-            description: Absence d'étiquettes sur les champs `<input>` du formulaire
-            criterion: '11.1'
             type: code
             delivery: Bloquant
           - name: Regroupement des champs
@@ -198,86 +208,189 @@
             delivery: Majeur
   - name : Page du dossier - onglet photo
     blocks : 
-    - name : Header 
-      errors : 
-        - name: 
-          description: 
-          criterion: 
-          type: 
-          delivery: 
     - name : Contenu
       errors : 
-        - name: 
-          description:  
-          criterion: 
-          type:
-          delivery: 
+        - name: Titre de la page 
+          description: Absence du nom du site "Taiga Admission" + Le nom de l'étape dans laquelle nous sommes. Ici "photo". Par exemple = "Taiga Admission - Création du dossier - Etape Photo"
+          criterion: '8.6'
+          type: code
+          delivery: Bloquant
+        - name: Structure des titres
+          description: Ajouter un élément `<h1>` à "N°Dossier", `<h2>` sur le titre "Sesssion d'admission …" 
+          criterion: '9.1'
+          type: code
+          delivery: Bloquant
+        - name: Contenu visible
+          description: L'information indiquant que nous sommes sur la partie "état civil et coordonnées" disparait quand on désactive les CSS. Ajouter l'attribut `aria-current="true"` sur l'onglet activé.
+          criterion: '10.2' 
+          type: code
+          delivery: Bloquant
+        - name: Bouton du formulaire
+          description: Intitulé du bouton pas pertinent. Par exemple = "Rechercher le dossier" 
+          criterion: '11.9'
+          type: code
+          delivery: Majeur
   - name : Page du dossier - onglet "fichiers et compléments"
     blocks : 
     - name : Header 
       errors : 
-        - name: 
-          description: 
-          criterion: 
-          type: 
-          delivery: 
+        - name: Images 
+          description: L'alternative textuelle des images signalant les catégories complètes / incomplètes n'est pas pertinente "[Image]".
+          criterion: '1.3'
+          type: visuel
+          delivery: Majeur
     - name : Contenu
       errors : 
-        - name: 
-          description:  
-          criterion: 
-          type:
-          delivery: 
+        - name: Tableau
+          description: Présence de `<th>` [Voir le critère 5.8 pour plus d'informations](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-8)
+          criterion: '5.8'
+          type: code
+          delivery: Majeur
+        - name: Titre de la page 
+          description: Absence du nom de "Taïga Admission", indiquer à quelle étape nous sommes
+          criterion: '8.6'
+          type: code
+          delivery: Bloquant
+        - name: Structure des titres 
+          description: Ajouter élément `<h1>` au texte "Créer Dossier", `<h2>` sur le titre de l'école HEAR et `<h3>` sur le titre "Déposer un dossier".
+          criterion: '9.1'
+          type: code 
+          delivery: Bloquant
+        - name: Indication de l'emplacement
+          description: L'information indiquant que nous sommes sur la partie "Fichiers et complément" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
+          criterion: '10.2'
+          type: code
+          delivery: Bloquant
+        - name: Formulaire 
+          description: Absence d'étiquette sur le `<select>`
+          criterion: '11.1'
+          type: code
+          delivery: Bloquant
+    - name : Page
+      errors : 
+        - name: Code
+          description: Usage de l'attribut `name` qui est obsolète, le remplacer par un attribut `id`
+          criterion: '8.2'
+          type: code
+          delivery: Majeur
   - name : Page du dossier - onglet "Parcours scolaire et universitaire"
     blocks : 
-    - name : Header 
-      errors : 
-        - name: 
-          description: 
-          criterion: 
-          type: 
-          delivery: 
     - name : Contenu
       errors : 
-        - name: 
-          description:  
-          criterion: 
-          type:
-          delivery: 
+        - name: Tableau
+          description:  Présence de `<th>` [Voir le critère 5.8 pour plus d'informations](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-8)
+          criterion: '5.8'
+          type: code
+          delivery: Majeur
+        - name: Titre de la page 
+          description: Absence du nom de "Taïga Admission", indiquer à quelle étape nous sommes
+          criterion: '8.6'
+          type: code
+          delivery: Bloquant
+        - name: Structure des titres 
+          description: Ajouter élément `<h1>` au texte "Créer Dossier" et `<h2>` sur le titre de l'école HEAR
+          criterion: '9.1'
+          type: code
+          delivery: Bloquant
+        - name: Indication de l'emplacement 
+          description: L'information indiquant que nous sommes sur la partie "Parcours scolaire et universitaire" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
+          criterion: '10.2'
+          type: code
+          delivery: Bloquant
+        - name: Regroupement des champs
+          description: Absence d'élément `<fieldset>` pour chacune des lignes du tableau
+          criterion: '11.5'
+          type: code
+          delivery: Bloquant
+        - name: Titre formulaire
+          description: Absence de `<legend>` pour chacune des lignes du tableau
+          criterion: '11.6'
+          type: code
+          delivery: Bloquant
   - name : Page du dossier - onglet "Cursus demandé"
     blocks : 
     - name : Header 
       errors : 
-        - name: 
-          description: 
-          criterion: 
-          type: 
-          delivery: 
+        - name: Images
+          description: Remplacer le texte de l'alternative "[Image]" par "Se déconnecter". Remplacer le texte de l'alternative "[image]" par " HEAR - Haute École des Arts du Rhin Mulhouse - Strasbourg". L'alternative textuelle des images signalant les catégories complètes/incomplètes n'est pas pertinente "[Image]". 
+          criterion: '1.3'
+          type: visuel 
+          delivery: Majeur
     - name : Contenu
       errors : 
-        - name: 
-          description:  
-          criterion: 
-          type:
-          delivery: 
+        - name: Constraste 
+          description: Le texte de la formation proposée dans les onglets n'est pas assez contrastée.
+          criterion: '3.2'
+          type: visuel
+          delivery: Bloquant
+        - name: Titres d'entête de tableau
+          description: Présence de `<th>` [Voir le critère 5.8 pour plus d'informations](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-8)
+          criterion: '5.8'
+          type: code
+          delivery: Majeur
+        - name: Titre de la page
+          description: Absence du nom de "Taïga Admission", indiquer à quelle étape nous sommes
+          criterion: '8.6'
+          type: code
+          delivery: Bloquant
+        - name: Structure des titres
+          description: Ajouter un élément `<h1>` au texte "Créer Dossier" et `<h2>` sur le titre de l'école HEAR
+          criterion: '9.1'
+          type: code
+          delivery: Bloquant
+        - name: Information sur l'emplacement
+          description: L'information indiquant que nous sommes sur la partie "Cursus demandé" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
+          criterion: '10.2' 
+          type: code
+          delivery: Bloquant
+        - name: Regroupement des champs
+          description: Absence d'élément `<fieldset>`
+          criterion: '11.5'
+          type: code
+          delivery: Bloquant
+        - name: Titre de formulaire
+          description: Absence d'élément `<legend>`
+          criterion: '11.6'
+          type: code
+          delivery: Bloquant
   - name : Page du dossier - onglet "Autres questions"
     blocks : 
     - name : Header 
       errors : 
-        - name: 
-          description: 
-          criterion: 
-          type: 
-          delivery: 
+        - name: Images
+          description: L'alternative textuelle des images signalant les catégories complètes/incomplètes n'est pas pertinente "[Image]".
+          criterion: '1.3'
+          type: visuel
+          delivery: Majeur
     - name : Contenu
       errors : 
-        - name: 
-          description:  
-          criterion: 
-          type:
-          delivery: 
-        - name: 
-          description: 
-          criterion: 
-          type: 
-          delivery: 
+        - name: Tableau
+          description: Présence de `<th>` [Plus d'information sur le critère 5.8](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/methode-rgaa/criteres/#crit-5-8)
+          criterion: '5.8'
+          type: code
+          delivery: Majeur
+        - name: Titre de la page
+          description: Absence du nom de "Taïga Admission", indiquer à quelle étape nous sommes
+          criterion: '8.6'
+          type: code
+          delivery: Bloquant
+        - name: Structure des titres
+          description: Ajouter élément `<h1>` au texte "Créer Dossier",  `<h2>` sur le titre de l'école HEAR et  `<hn>`à chaque titre simulé (Lien vers les enregistrements pour la préselection, Allez-vous faire une demande de bourse…).
+          criterion: '9.1'
+          type: code
+          delivery: Bloquant
+        - name: Indication de l'emplacement 
+          description: L'information indiquant que nous sommes sur la partie "Autres questions" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
+          criterion: '10.2'
+          type: code
+          delivery: Bloquant
+        - name: Regroupement des champs
+          description: Absence d'élément `<fieldset>`
+          criterion: '11.5'
+          type: code
+          delivery: Bloquant
+        - name: Titre de formulaire
+          description: Absence d'élément `<legend>`
+          criterion: '11.6'
+          type: code
+          delivery: Bloquant
