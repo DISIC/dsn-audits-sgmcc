@@ -298,13 +298,13 @@
           type: code
           delivery: Bloquant
         - name: Regroupement des champs
-          description: Absence d'élément `<fieldset>` pour chacune des lignes du tableau
+          description: Absence d'élément `<fieldset>` pour chacune des lignes du tableau, sans oublier de rajouter une balise `<legend>` également
           criterion: '11.5'
           type: code
           delivery: Bloquant
-        - name: Titre formulaire
-          description: Absence de `<legend>` pour chacune des lignes du tableau
-          criterion: '11.6'
+        - name: Formulaire 
+          description: Absence d'étiquette sur le `<select>` 
+          criterion: '11.1'
           type: code
           delivery: Bloquant
   - name : Page du dossier - onglet "Cursus demandé"
@@ -344,15 +344,15 @@
           type: code
           delivery: Bloquant
         - name: Regroupement des champs
-          description: Absence d'élément `<fieldset>`
+          description: Absence d'élément `<fieldset>` pour chacune des lignes du tableau, sans oublier de rajouter une balise `<legend>` également
           criterion: '11.5'
           type: code
           delivery: Bloquant
-        - name: Titre de formulaire
-          description: Absence d'élément `<legend>`
-          criterion: '11.6'
+        - name: Etiquettes de formulaire
+          description: Absence d'étiquettes sur les champs `<input>` et `<select>`
+          criterion: '11.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
   - name : Page du dossier - onglet "Autres questions"
     blocks : 
     - name : Header 
@@ -385,12 +385,7 @@
           type: code
           delivery: Bloquant
         - name: Regroupement des champs
-          description: Absence d'élément `<fieldset>`
+          description: Absence d'élément `<fieldset>` pour chacune des lignes du tableau, sans oublier de rajouter une balise `<legend>` également
           criterion: '11.5'
-          type: code
-          delivery: Bloquant
-        - name: Titre de formulaire
-          description: Absence d'élément `<legend>`
-          criterion: '11.6'
           type: code
           delivery: Bloquant
