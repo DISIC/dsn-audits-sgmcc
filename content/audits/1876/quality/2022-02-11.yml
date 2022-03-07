@@ -115,7 +115,7 @@
           description: Ajouter un <hn> sur le titre "N°Dossier"
           criterion: '9.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
         - name: Formulaire
           description: Absence d'étiquette sur les champ de formulaire (référence et nom). Ajouter un attribut `aria-label` ou un attribut `title` avec l'intitulé du champ sur les `<input>`.
           criterion: '11.1'
@@ -146,7 +146,7 @@
           description: Ajouter élément `<h1>` au texte "Créer Dossier" et `<h2>` sur le titre de l'école HEAR
           criterion: '9.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
   - name : Page d'accueil du dossier
     blocks : 
       - name : Contenu
@@ -170,7 +170,7 @@
             description: Ajouter un élément `<h1>` à "N°Dossier", `<h2>` sur le titre "Sesssion d'admission …" 
             criterion: '9.1'
             type: code
-            delivery: Bloquant
+            delivery: Majeur
           - name: Affichage de l'info 
             description: L'information indiquant que nous sommes sur la partie "état civil et coordonnées" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
             criterion: '10.2' 
@@ -219,7 +219,7 @@
           description: Ajouter un élément `<h1>` à "N°Dossier", `<h2>` sur le titre "Sesssion d'admission …" 
           criterion: '9.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
         - name: Contenu visible
           description: L'information indiquant que nous sommes sur la partie "état civil et coordonnées" disparait quand on désactive les CSS. Ajouter l'attribut `aria-current="true"` sur l'onglet activé.
           criterion: '10.2' 
@@ -255,7 +255,7 @@
           description: Ajouter élément `<h1>` au texte "Créer Dossier", `<h2>` sur le titre de l'école HEAR et `<h3>` sur le titre "Déposer un dossier".
           criterion: '9.1'
           type: code 
-          delivery: Bloquant
+          delivery: Majeur
         - name: Indication de l'emplacement
           description: L'information indiquant que nous sommes sur la partie "Fichiers et complément" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
           criterion: '10.2'
@@ -291,7 +291,7 @@
           description: Ajouter élément `<h1>` au texte "Créer Dossier" et `<h2>` sur le titre de l'école HEAR
           criterion: '9.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
         - name: Indication de l'emplacement 
           description: L'information indiquant que nous sommes sur la partie "Parcours scolaire et universitaire" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
           criterion: '10.2'
@@ -337,7 +337,7 @@
           description: Ajouter un élément `<h1>` au texte "Créer Dossier" et `<h2>` sur le titre de l'école HEAR
           criterion: '9.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
         - name: Information sur l'emplacement
           description: L'information indiquant que nous sommes sur la partie "Cursus demandé" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
           criterion: '10.2' 
@@ -378,7 +378,7 @@
           description: Ajouter élément `<h1>` au texte "Créer Dossier",  `<h2>` sur le titre de l'école HEAR et  `<hn>`à chaque titre simulé (Lien vers les enregistrements pour la préselection, Allez-vous faire une demande de bourse…).
           criterion: '9.1'
           type: code
-          delivery: Bloquant
+          delivery: Majeur
         - name: Indication de l'emplacement 
           description: L'information indiquant que nous sommes sur la partie "Autres questions" disparait quand on désactive les CSS. Ajouter l'attribut 'aria-current="true"' sur l'onglet activé.
           criterion: '10.2'
